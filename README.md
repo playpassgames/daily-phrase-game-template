@@ -1,15 +1,15 @@
-# Daily Dice project template
+# Daily Phrase project template
 
-This is an example of how to use the Playpass SDK to build a simple daily level game.
+This is an example of how to use the Playpass SDK to build a simple daily phrase game.
 
-Preview: https://base--template.playpass.games
+Preview: TBD
 
 ## Setup
 
 Clone this template by running:
 
 ```shell
-playpass create --template playpassgames/playpass-game-template
+playpass create --template playpassgames/daily-phrase-game-template
 ```
 
 For more info about using Playpass, see the [quickstart guide](https://docs.playpass.games/).
