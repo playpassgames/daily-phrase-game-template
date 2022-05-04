@@ -1,7 +1,8 @@
 import * as playpass from "playpass";
 
-import "./boilerplate/common.css";
-import "./main.css";
+import "./styles/common.css";
+import "./styles/main.css";
+import "./styles/dailyPhrase.css";
 
 import * as timer from "./boilerplate/timer";
 

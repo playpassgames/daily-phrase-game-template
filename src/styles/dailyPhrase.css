@@ -1,0 +1,68 @@
+/* Grid */
+.grid {
+    padding: 1em 0;
+}
+
+.grid > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 35px;
+    color: #f0f0f0;
+    border-bottom: 5px solid #C4C4C4;
+}
+
+/* Grid row */
+.grid > div {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 2px;
+}
+
+.grid > div > div.active {
+    color: black;
+}
+
+.grid > div > div.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.keyboard {
+    padding-top: 50px;
+}
+
+/* Keyboard row */
+.keyboard > div {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin: 2px;
+}
+
+/* Keyboard key */
+.keyboard > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 56px;
+    border-radius: 4px;
+    background: #ccc;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.keyboard > div > div.hidden {
+    background-color: #f0f0f0;
+    color: #f0f0f0;
+}
