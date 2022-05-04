@@ -1,10 +1,20 @@
 const phrases = [
     {
-        category: "Famous dish originating from Italy",
+        category: "Famous Foods",
         answers: [
-            "spaghetti and meatballs"
+            "spaghetti and meatballs",
+            "peanut butter and jelly sandwich",
+            "beef stroganoff"
         ]
     },
+    {
+        category: "Video Games",
+        answers: [
+            "call of duty",
+            "the legend of zelda",
+            "world of warcraft"
+        ]
+    }
 ];
 
 export function getTodaysCategory(today) {
