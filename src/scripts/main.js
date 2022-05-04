@@ -11,20 +11,12 @@ import { getHoursUntil, getMinutesUntil, getNextGameTime, getSecondsUntil } from
 
 import { Grid } from "./grid";
 import { Keyboard } from "./keyboard";
+import { getTodaysAnswer, getTodaysCategory } from './phraseBank';
 
 const daily = new Daily(Date.parse("2022-04-21T12:00:00"));
 
-const phrases = [
-    {
-        category: "Famous dish originating from Italy",
-        answers: [
-            "spaghetti and meatballs"
-        ]
-    },
-];
-
-const todaysCategory = phrases[daily.day % phrases.length];
-const todaysAnswer = todaysCategory.answers[daily.day % todaysCategory.answers.length];
+const todaysCategory = getTodaysCategory(daily);
+const todaysAnswer = getTodaysAnswer(daily);
 
 let state = null;
 
