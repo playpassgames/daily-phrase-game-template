@@ -1,0 +1,28 @@
+{
+    "phrases": [
+        {
+            "phrase": "spaghetti and meatballs",
+            "category": "Famous Foods"
+        },
+        {
+            "phrase": "peanut butter and jelly sandwich",
+            "category": "Famous Foods"
+        },
+        {
+            "phrase": "beef stroganoff",
+            "category": "Famous Foods"
+        },
+        {
+            "phrase": "call of duty",
+            "category": "Video Games"
+        },
+        {
+            "phrase": "the legend of zelda",
+            "category": "Video Games"
+        },
+        {
+            "phrase": "world of warcraft",
+            "category": "Video Games"
+        }
+    ]
+}

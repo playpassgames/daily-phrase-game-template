@@ -1,0 +1,41 @@
+game-grid {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 56px;
+    row-gap: 16px;
+}
+
+/* Grid */
+game-grid .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 35px;
+    color: #f0f0f0;
+    border-bottom: 5px solid #C4C4C4;
+}
+
+/* Grid row */
+game-grid > div {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 2px;
+}
+
+game-grid .cell[s=b] {
+    border: 2px solid #6aaa64;
+    background-color: #6aaa64;
+    color: white;
+}
+
+game-grid .cell.whitespace {
+    border-bottom: none;
+}
