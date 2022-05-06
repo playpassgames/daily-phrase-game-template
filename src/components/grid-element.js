@@ -3,14 +3,6 @@ import "./grid-element.css";
 
 // The NxM grid of letters
 export class Grid extends HTMLElement {
-    get attempts() {
-        return this.getAttribute("max-attempts") || 6;
-    }
-    
-    set attempts(newValue) {
-        this.setAttribute("max-attempts", newValue);
-    }
-
     set answer(phrase) {
         this._answer = phrase;
         this.build();
