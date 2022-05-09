@@ -1,3 +1,10 @@
+:root {
+    --grid-cell-bull: black;
+    --grid-cell-bull-letter: black;
+    --grid-cell-empty: black;
+    --grid-cell-empty-letter: black;
+}
+
 game-grid {
     display: flex;
     flex: 1;
@@ -18,8 +25,8 @@ game-grid .cell {
     cursor: pointer;
     font-weight: bold;
     font-size: 35px;
-    color: #f0f0f0;
-    border-bottom: 5px solid #C4C4C4;
+    color: var(--grid-cell-empty-letter);
+    border-bottom: 5px solid var(--grid-cell-empty);
 }
 
 /* Grid row */
@@ -31,9 +38,8 @@ game-grid > div {
 }
 
 game-grid .cell[s=b] {
-    border: 2px solid #6aaa64;
-    background-color: #6aaa64;
-    color: white;
+    border-color: var(--grid-cell-bull);
+    color: var(--grid-cell-bull-letter);
 }
 
 game-grid .cell.whitespace {
