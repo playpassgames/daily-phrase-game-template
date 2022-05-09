@@ -3,99 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
-  <title>Phrase Game Daily</title>
-  <script type="module" src="/src/scripts/main.js"></script>
+  <title>Daily Phrase</title>
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body>
 
-  <header>
-    <div id="helpBtn"></div>
-    <h1>Phrase Game Daily</h1>
-    <div id="statsBtn"></div>
-    <div id="settingsBtn"></div>
-  </header>
+  <game-header>
+    <div class="button" name="help" slot="buttons-left"></div>
+    <h2 slot="brand">Daily Phrase</h2>
+    <div class="button" name="stats" slot="buttons-right"></div>
+    <div class="button" name="settings" slot="buttons-right"></div>
+  </game-header>
 
-  <div class="screen" id="resultScreen">
-    <h1 id="resultLine1">Today's phrase was ...</h1>
-    <h1 id="resultLinePhrase">PHRASE</h1>
-    <h1 id="resultLine2">RESULT</h1>
-    <h2 id="resultLine3">SCORE</h2>
-    <button id="shareBtn">🗨️ Share</button>
-    <p><span id="timeLeft">12h 34m 56s</span> until next word.</p>
-  </div>
-
-  <div class="screen" id="playingScreen">
-    <div class="game-header">      
-      <h3>Lives: <span id="lives">8</span></h3>
+  <screen-router>
+    <div slot="load-spinner">
+      &#9676;
     </div>
 
-    <h2 id="answer"></h2>
+    <div slot="screen" id="results-screen">
+      <h1 id="resultLine1">Today's phrase was ...</h1>
+      <h1 id="resultLinePhrase">PHRASE</h1>
+      <h1 id="resultLine2">RESULT</h1>
+      <h2 id="resultLine3">SCORE</h2>
+      <button name="share">🗨️ Share</button>
+      <p><span id="timeLeft">12h 34m 56s</span> until next word.</p>
+    </div>
 
-    <div class="grid"></div>
-
-    <h2 id="category">Try to guess today's phrase</h2>
-
-    <div class="keyboard">
-      <div>
-        <div>Q</div>
-        <div>W</div>
-        <div>E</div>
-        <div>R</div>
-        <div>T</div>
-        <div>Y</div>
-        <div>U</div>
-        <div>I</div>
-        <div>O</div>
-        <div>P</div>
+    <div slot="screen" id="game-screen">
+      <div class="game-header">      
+        <h3>Lives: <span id="lives">8</span></h3>
       </div>
-      <div>
-        <div>A</div>
-        <div>S</div>
-        <div>D</div>
-        <div>F</div>
-        <div>G</div>
-        <div>H</div>
-        <div>J</div>
-        <div>K</div>
-        <div>L</div>
+
+      <h2 id="answer"></h2>
+
+      <game-grid></game-grid>
+
+      <h2 id="category">Try to guess today's phrase</h2>
+
+      <game-keyboard></game-keyboard>
+    </div>
+
+    <div slot="screen" id="help-screen">
+      <h2>Welcome to Phrase Game!</h2>
+      <p>This is an example of how to use the Playpass SDK to build a simple daily level phrase game.</p>
+      <p>Each day, there's a different phrase to guess. You have 8 tries to get it right!</p>
+      <button name="back">Continue</button>
+    </div>
+
+    <div slot="screen" id="stats-screen">
+      <h2>Stats</h2>
+      <p id="winStats"></p>
+      <button name="back">Back</button>
+    </div>
+
+    <div slot="screen" id="settings-screen">
+      <h2>Settings</h2>
+      <div class="showIfLoggedOut">
+        <div>Login to save or transfer your game progress.</div>
+        <button name="login">📱 Login</button>
       </div>
-      <div>
-        <div>Z</div>
-        <div>X</div>
-        <div>C</div>
-        <div>V</div>
-        <div>B</div>
-        <div>N</div>
-        <div>M</div>
+      <div class="showIfLoggedIn">
+        <div>You are logged in, your progress will be saved.</div>
+        <button name="logout">Logout</button>
       </div>
+      <button name="back">Back</button>
     </div>
-  </div>
-
-  <div class="screen" id="helpScreen">
-    <h2>Welcome to Phrase Game!</h2>
-    <p>This is an example of how to use the Playpass SDK to build a simple daily level phrase game.</p>
-    <p>Each day, there's a different phrase to guess. You have 8 tries to get it right!</p>
-    <button id="helpBackBtn">Continue</button>
-  </div>
-
-  <div class="screen" id="statsScreen">
-    <h2>Stats</h2>
-    <p id="winStats"></p>
-    <button id="statsBackBtn">Back</button>
-  </div>
-
-  <div class="screen" id="settingsScreen">
-    <h2>Settings</h2>
-    <div class="showIfLoggedOut">
-      <div>Login to save or transfer your game progress.</div>
-      <button id="loginBtn">📱 Login</button>
-    </div>
-    <div class="showIfLoggedIn">
-      <div>You are logged in, your progress will be saved.</div>
-      <button id="logoutBtn">Logout</button>
-    </div>
-    <button id="settingsBackBtn">Back</button>
-  </div>
-
+  </screen-router>
 </body>
 </html>

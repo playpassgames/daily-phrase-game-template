@@ -1,0 +1,54 @@
+:root {
+    --keyboard-key-font: Arial, sans-serif;
+    --keyboard-key-letter: white;
+    --keyboard-key-color: #ccc;
+    --keyboard-key-pressed: gray;
+    --keyboard-key-pressed-letter: white;
+    --keyboard-key-bull: #6aaa64;
+    --keyboard-key-bull-letter: white;
+    --keyboard-key-cow: #c9b458;
+    --keyboard-key-cow-letter: white;
+}
+
+game-keyboard {
+    display: block;
+    margin-top: 50px;
+}
+
+/* Keyboard row */
+game-keyboard .row {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin: 2px;
+}
+
+/* Keyboard key */
+game-keyboard .key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 56px;
+    border-radius: 4px;
+    background: var(--keyboard-key-color);
+    cursor: pointer;
+    color: var(--keyboard-key-letter);
+    font-weight: bold;
+    font-family: var(--keyboard-key-font);
+}
+
+game-keyboard .key[s=b] {
+    background-color: var(--keyboard-key-bull);
+    color: var(--keyboard-key-bull-letter);
+}
+
+game-keyboard .key[s=c] {
+    background-color:var(--keyboard-key-cow);
+    color: var(--keyboard-key-cow-letter);
+}
+
+game-keyboard .key[s=n] {
+    background-color: var(--keyboard-key-pressed);
+    color: var(--keyboard-key-pressed-letter);
+}
